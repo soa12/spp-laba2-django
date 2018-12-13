@@ -29,3 +29,8 @@ def statistics(request):
     images = Image.objects.all()
     return render(request, 'img_app/statistics.html', {'images': images})
 
+def contacts(request):
+    return render(request, 'img_app/contacts.html')
+
+def about(request):
+    return render(request, 'img_app/about.html')

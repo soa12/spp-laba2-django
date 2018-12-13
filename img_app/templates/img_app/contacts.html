@@ -1,0 +1,50 @@
+{% extends 'img_app/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <a class="dg-widget-link"
+            href="http://2gis.ru/tomsk/firm/423196012851303/center/84.9552583694458,56.4623956438162/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
+                на карте Томска</a>
+            <div class="dg-widget-link"><a
+                        href="http://2gis.ru/tomsk/firm/423196012851303/photos/423196012851303/center/84.9552583694458,56.4623956438162/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии
+                    компании</a></div>
+            <div class="dg-widget-link"><a
+                        href="http://2gis.ru/tomsk/center/84.955262,56.462394/zoom/16/routeTab/rsType/bus/to/84.955262,56.462394╎Национальный исследовательский Томский политехнический университет?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти
+                    проезд до Национальный исследовательский Томский политехнический университет</a></div>
+            <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+            <script charset="utf-8">new DGWidgetLoader({
+                    "width": 640,
+                    "height": 500,
+                    "borderColor": "#a3a3a3",
+                    "pos": {"lat": 56.4623956438162, "lon": 84.9552583694458, "zoom": 17},
+                    "opt": {"city": "tomsk"},
+                    "org": [{"id": "423196012851303"}]
+                });</script>
+            <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в
+                настройках вашего браузера.
+            </noscript>
+        </div>
+        <div class="col-md-4">
+                <div class="span3">
+                        <div class="title"><h3>Contact Info</h3></div>
+                        <p>
+                            <b>TPU</b>
+                        </p>
+                        <p>	
+                            Phone: (123) 456-7890
+                        </p>
+                        <p>	
+                            Fax: +08 (123) 456-7890
+                        </p>
+                        <p>
+                            Email: developer@tpu.ru
+                        </p>
+                        <p>
+                            Web: tpu.ru
+                        </p>
+                    </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

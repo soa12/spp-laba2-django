@@ -6,6 +6,8 @@ urlpatterns = [
     url(r'^image/(?P<image_id>[0-9]+)/$', views.detail, name='detail'),
     url(r'^image/(dis)?like/(?P<image_id>[0-9]+)/$', views.vote, name='vote'),
     url(r'^images/statistics/$', views.statistics, name='statistics'),
+    url(r'^contacts/$', views.contacts, name='contacts'),
+    url(r'^about/$', views.about, name='about'),
 ]
 
 urlpatterns += [
