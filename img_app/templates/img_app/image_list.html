@@ -5,36 +5,35 @@
 {% block content %}
 <div class="container">        
     <div class="row">         
-            {% for image in images %}
-                <a data-toggle="" data-target="#myModal" href="/image/{{image.id}}">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <img src="{% static image.upload.url %}" alt="...">
-                            <div class="caption">
-                                <h3>{{image.title}}</h3>
-                            </div>
+        {% for image in images %}
+            <a data-toggle="" data-target="#myModal" href="/image/{{image.id}}">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="thumbnail">
+                        <img src="{% static image.upload.url %}" alt="...">
+                        <div class="caption">
+                            <h3>{{image.title}}</h3>
                         </div>
                     </div>
-                </a>
-                
-            {% endfor %} 
-            </div> 
-            
-        </div>
-        <div class="container">
-                <div class="col-6 offset-3 text-center pagination-set">
-                        <ul class="pager">
-                                {% if images.has_previous %}
-                                    <li class="previous"><a href="?page={{ images.previous_page_number }}">previous</a></li>
-                                {% else %}
-                                    <li class="previous disabled"><a href="?page=">previous</a></li>
-                                {% endif %}
-                                {% if images.has_next %}
-                                    <li class="previous"><a href="?page={{ images.next_page_number }}">next</a></li>
-                                {% else %}
-                                    <li class="previous disabled"><a href="?page=">next</a></li>
-                                {% endif %}
-                            </ul>
-                    </div>  
-        </div>
-{% endblock %}    
+                </div>
+            </a>
+        {% endfor %} 
+    </div>            
+</div>
+<div class="container">
+    <div class="col-md-6 col-md-offset-5 ">
+        <ul class="pager">
+            {% if images.has_previous %}
+                <li class="previous"><a href="?page={{ images.previous_page_number }}">previous</a></li>
+            {% else %}
+                <li class="previous disabled"><a href="?page=">previous</a></li>
+            {% endif %}
+            {% if images.has_next %}
+                <li class="previous"><a href="?page={{ images.next_page_number }}">next</a></li>
+            {% else %}
+                <li class="previous disabled"><a href="?page=">next</a></li>
+            {% endif %}
+        </ul>
+    </div>  
+</div>
+{% endblock %} 
+   
