@@ -122,3 +122,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+MEDIA_ROOT = '/srv/www/sovr-progr-platf/spp-python/laba2/img_app/static/img/uploads/'
+MEDIA_URL = '/img/uploads/'
