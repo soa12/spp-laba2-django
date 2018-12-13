@@ -2,11 +2,15 @@
 {% load static %}
 
 {% block content %}
-<div class="col-xs-6 col-md-6">
-    <img src="{% static image.upload.url %}" alt="...">
-    <p>
-        <a href="/image/like/{{image.id}}" class="btn btn-primary" role="button">Like</a> 
-        <a href="/image/dislike/{{image.id}}" class="btn btn-warning" role="button">Disike</a> 
-    </p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+                <img src="{% static image.upload.url %}" alt="...">
+                <p>
+                    <a href="/image/like/{{image.id}}" class="btn btn-primary" role="button">Like</a> 
+                    <a href="/image/dislike/{{image.id}}" class="btn btn-warning" role="button">Disike</a> 
+                </p>
+        </div>
+    </div>
 </div>
 {% endblock %}
