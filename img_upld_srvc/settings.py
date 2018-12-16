@@ -125,3 +125,22 @@ LOGOUT_REDIRECT_URL = '/'
 
 MEDIA_ROOT = '/srv/www/sovr-progr-platf/spp-python/laba2/img_app/static/img/uploads/'
 MEDIA_URL = '/img/uploads/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/srv/www/sovr-progr-platf/spp-python/laba2/logs/my_log.log',
+        },
+    },
+    'loggers': {
+        'news': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
